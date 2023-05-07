@@ -30,6 +30,6 @@ jobs:
         docker build -t angelcrisos/docker-graphql:0.0.2 . 
     - name: Push Docker image
       run: |
-        docker push angelcrisos/docker-graphql:0.0.2 . 
+        docker push angelcrisos/docker-graphql:0.0.2 
  #   - name: Build the Docker image
  #     run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
