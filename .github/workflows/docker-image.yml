@@ -23,7 +23,7 @@ jobs:
         DOCKER_PASSWORD: dckr_pat_K46ENAWonCRgA6xWqABuQtUzzbI
       run: |
         echo "Iniciando Login 1"
-        docker login registry-1.docker.io -u DOCKER_USER -p DOCKER_PASSWORD
+        docker login -u DOCKER_USER -p DOCKER_PASSWORD
         echo "FIN login"
  #   - name: Build the Docker image
  #     run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
