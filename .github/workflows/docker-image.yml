@@ -34,12 +34,12 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "New version : $NEW_VERSION !!!!"
         echo "FIN login"
- #   - name: Build Docker image
- #     run: |
- #       docker build -t angelcrisos/docker-graphql:0.0.2 . 
- #       docker build -t angelcrisos/docker-graphql:latest . 
- #   - name: Push Docker image
- #     run: |
- #       docker push angelcrisos/docker-graphql:0.0.2 
- #       docker push angelcrisos/docker-graphql:latest
+    - name: Build Docker image
+      run: |
+        docker build -t angelcrisos/docker-graphql:$NEW_VERSION . 
+        docker build -t angelcrisos/docker-graphql:latest . 
+    - name: Push Docker image
+      run: |
+        docker push angelcrisos/docker-graphql:$NEW_VERSION
+        docker push angelcrisos/docker-graphql:latest
  
